@@ -1,1 +1,17 @@
-eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 4=5;2 3=[];8(9 i=0;i<4;i++){2 1=b 6("1.c");1.d(i);3.e(1)}3.f((1,i)=>{1.g=h(a){2 7=a.j;k.l(`6 ${i}完成任务，结果为:${7}`)}});',22,22,'|worker|const|workers|numWorkers||Worker|result|for|let||new|js|postMessage|push|forEach|onmessage|function||data|console|log'.split('|'),0,{}))
+// 创建多个 Web Worker
+const numWorkers = 10; // 可以根据需要调整线程数量
+const workers = [];
+
+for (let i = 0; i < numWorkers; i++) {
+  const worker = new Worker("worker.js"); // 创建 Web Worker
+  worker.postMessage(i); // 向 Worker 发送任务标识，以便区分不同的 Worker
+  workers.push(worker);
+}
+
+// 在主线程中处理 Web Worker 的结果
+workers.forEach((worker, i) => {
+  worker.onmessage = function(event) {
+    const result = event.data;
+    console.log(`Worker ${i} 完成任务，结果为: ${result}`);
+  };
+});
