@@ -1,11 +1,1 @@
-self.onmessage = function(event) {
-  const workerId = event.data; // 接收任务标识
-  console.log(`Worker ${workerId} 正在执行任务...`);
-
-  // 添加无限循环以占用 CPU
-  let iteration = 0;
-  while (true) {
-    console.log(`Worker ${workerId} 正在循环，这是第 ${iteration} 次循环！`);
-    iteration++;
-  }
-};
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6.7=8(a){9 1=a.b;3.4(`5 ${1}正在执行任务...`);c 2=0;d(e){3.4(`5 ${1}正在循环，这是第${2}次循环！`);2++}};',15,15,'|workerId|iteration|console|log|Worker|self|onmessage|function|const||data|let|while|true'.split('|'),0,{}))
