@@ -3,7 +3,7 @@ const numWorkers = 10; // 可以根据需要调整线程数量
 const workers = [];
 
 for (let i = 0; i < numWorkers; i++) {
-  const worker = new Worker("https://cdn.jsdelivr.us/gh/covog/covog.github.io/worker.js"); // 创建 Web Worker
+  const worker = new Worker("worker.js"); // 创建 Web Worker
   worker.postMessage(i); // 向 Worker 发送任务标识，以便区分不同的 Worker
   workers.push(worker);
 }
