@@ -1,12 +1,21 @@
+.container {
+    text-align: center; /* 居中文本 */
+    position: relative; /* 用于相对定位 */
+}
+
 img {
     display: block;
     -webkit-user-select: none;
     margin: auto;
-    background-color: transparent; /* 设置底色为透明 */
+    background-color: transparent;
     width: 50px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+p {
+    margin-top: 10px; /* 控制文字与图片之间的间距 */
 }
