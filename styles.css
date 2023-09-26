@@ -1,8 +1,12 @@
 img {
     display: block;
     -webkit-user-select: none;
-    margin-top: auto;
-    margin-bottom: auto;
-    background-color: hsl(0, 0%, 90%);
+    margin: auto;
+    background-color: transparent; /* 设置底色为透明 */
     width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
